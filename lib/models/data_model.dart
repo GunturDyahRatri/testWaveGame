@@ -8,6 +8,14 @@ class DataModel {
 }
 
 List<DataModel> dataList = [
-  DataModel("Lady Jeans", "assets/pic_slide.jpg", "30%  Rp.55000", "bla bla bla"),
- 
+  DataModel(
+      "Lady Jeans", "assets/pic_slide.png", "30%  Rp.55000", "bla bla bla"),
+  DataModel(
+      "Lady Jeans", "assets/pic_slide.png", "30%  Rp.55000", "bla bla bla"),
+  DataModel(
+      "Lady Jeans", "assets/pic_slide.png", "30%  Rp.55000", "bla bla bla"),
+  DataModel(
+      "Lady Jeans", "assets/pic_slide.png", "30%  Rp.55000", "bla bla bla"),
+  DataModel(
+      "Lady Jeans", "assets/pic_slide.png", "30%  Rp.55000", "bla bla bla"),
 ];

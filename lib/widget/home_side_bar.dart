@@ -1,4 +1,7 @@
+// import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:testwavegame/widget/reply_page.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeSideBar extends StatelessWidget {
@@ -8,36 +11,45 @@ class HomeSideBar extends StatelessWidget {
   Widget build(BuildContext context) {
     // TextStyle style = Theme.of(context)
     return Padding(
-      padding: const EdgeInsets.only(right : 10.0),
+      padding: const EdgeInsets.only(right: 10.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _sideBarItem('like', '30'),
-          _sideBarItem('reply', '2'),
-          _sideBarItem('share', ''),
+          _sideBarItem(context, 'like', '30'),
+          _sideBarItem(context, 'reply', '2'),
+          _sideBarItem(context, 'share', ''),
           _profileImage(),
         ],
       ),
     );
-  }
 
-  _sideBarItem(String iconName, String label) {
-    return Column(
-      children: [
-        Image.asset('assets/$iconName.png'),
-        const SizedBox(height: 5),
-        Text(
-          label,
-          style: const TextStyle(
-            fontWeight: FontWeight.normal,
-            color: Colors.white,
-            fontSize: 10,
+
+    
+  }
+ Widget _sideBarItem(BuildContext context, String iconName, String label) {
+    return InkWell(
+      onTap:(() {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => const ReplyPage())));
+                }),
+      child: Column(
+        children: [
+          Image.asset('assets/$iconName.png'),
+          const SizedBox(height: 5),
+          Text(
+            label,
+            style: const TextStyle(
+              fontWeight: FontWeight.normal,
+              color: Colors.white,
+              fontSize: 10,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
+ 
 
   _profileImage() {
     return Stack(

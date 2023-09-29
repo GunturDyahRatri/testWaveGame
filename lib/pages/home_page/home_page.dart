@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testwavegame/widget/home_bottom_slide.dart';
+import 'package:testwavegame/widget/home_bottom_side_bar.dart';
+// import 'package:testwavegame/widget/home_bottom_slide.dart';
 import 'package:testwavegame/widget/home_side_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,7 +11,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-
         elevation: 0,
         backgroundColor: Colors.transparent,
         title: Center(
@@ -48,10 +48,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Text("For You",  style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 15),),
+                const Text(
+                  "For You",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 15),
+                ),
               ],
             ),
           ),
@@ -66,8 +69,13 @@ class HomePage extends StatelessWidget {
             // alignment: Alignment.bottomCenter,
             children: [
               Container(
-                color: Colors.purple,
-                child: Image.asset( 'assets/home_image.png'),
+                width: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height,
+                color: Colors.transparent,
+                child: Image.asset(
+                  'assets/home_image.png',
+                  fit: BoxFit.fill,
+                ),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -76,10 +84,10 @@ class HomePage extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Padding(
-                      padding: const EdgeInsets.only(top : 180.0),
+                      padding: const EdgeInsets.only(top: 250.0),
                       child: Container(
                         width: MediaQuery.of(context).size.height / 7,
-                        height: MediaQuery.of(context).size.height / 50,
+                        height: MediaQuery.of(context).size.height / 100,
                         color: Colors.transparent,
                         child: const HomeSideBar(),
                       ),
@@ -87,7 +95,7 @@ class HomePage extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      color: Colors.pink,
+                      color: Colors.transparent,
                       child: const HomeBottomSlidePage(),
                     ),
                   ),
