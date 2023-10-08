@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:testwavegame/widget/reply_page.dart';
+// import 'package:testwavegame/widget/reply_page.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeSideBar extends StatelessWidget {
@@ -17,7 +18,11 @@ class HomeSideBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _sideBarItem(context, 'like', '30'),
-          _sideBarItem(context, 'reply', '2'),
+          // Stack(
+          //   children: <Widget>[
+              _sideBarItem(context, 'reply', '2'),
+          //   ],
+          // ),
           _sideBarItem(context, 'share', ''),
           _profileImage(),
         ],
@@ -30,7 +35,7 @@ class HomeSideBar extends StatelessWidget {
  Widget _sideBarItem(BuildContext context, String iconName, String label) {
     return InkWell(
       onTap:(() {
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: ((context) => const ReplyPage())));
                 }),
       child: Column(

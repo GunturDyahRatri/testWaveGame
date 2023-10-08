@@ -39,22 +39,22 @@ class _HomeBottomSlidePageState extends State<HomeBottomSlidePage> {
             const Padding(
               padding: EdgeInsets.only(left : 20.0),
               child: Text(
-                "Description",
+                '립스틱 색상 너무 예뻐요',
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 15,
                 ),
               ),
             ),
             const Padding(
               padding: EdgeInsets.only(left : 20.0),
               child: Text(
-                "blasdsfksldjgbslkgjsgbkjg",
+                '립스틱 색상 너무 예뻐요',
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 15,
                 ),
               ),
             ),
@@ -139,15 +139,15 @@ class _HomeBottomSlidePageState extends State<HomeBottomSlidePage> {
                               Text(
                                 data.description,
                                 style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.normal,
                                   color: Colors.black,
-                                  fontSize: 20,
+                                  fontSize: 15,
                                 ),
                               ),
                               Text(
                                 data.price,
                                 style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
+                                  fontWeight: FontWeight.normal,
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),

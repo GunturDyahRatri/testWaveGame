@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         title: Center(
           child: Container(
             height: 50,
-            width: 180,
+            width: 130,
             decoration: BoxDecoration(
               color: Colors.black,
               borderRadius: BorderRadius.circular(30),
@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
               children: [
                 Container(
                   height: 40,
-                  width: 95,
+                  width: 70,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
@@ -39,21 +39,21 @@ class HomePage extends StatelessWidget {
                   child: const Center(
                     child: Center(
                       child: Text(
-                        "Following",
+                        '추천',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.normal,
                             color: Colors.black,
-                            fontSize: 15),
+                            fontSize: 20),
                       ),
                     ),
                   ),
                 ),
                 const Text(
-                  "For You",
+                  '팔로우',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.normal,
                       color: Colors.white,
-                      fontSize: 15),
+                      fontSize: 20),
                 ),
               ],
             ),
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                   Expanded(
                     flex: 3,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 250.0),
+                      padding: const EdgeInsets.only(top: 420.0),
                       child: Container(
                         width: MediaQuery.of(context).size.height / 7,
                         height: MediaQuery.of(context).size.height / 100,
